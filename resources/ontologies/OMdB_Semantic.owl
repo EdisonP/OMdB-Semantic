@@ -1,0 +1,1246 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#"
+     xml:base="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:obda="https://w3id.org/obda/vocabulary#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#hasActor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#hasActor">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#hasRoles"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#hasCreator -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#hasCreator">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#hasRoles"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#hasDirector -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#hasDirector">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#hasRoles"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#hasFilmed -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#hasFilmed"/>
+    
+
+
+    <!-- http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#hasMovieRating -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#hasMovieRating">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#hasRating"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#hasMovieUKRating -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#hasMovieUKRating">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#hasMovieRating"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#hasMovieUSRating -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#hasMovieUSRating">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#hasMovieRating"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#hasProduced -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#hasProduced"/>
+    
+
+
+    <!-- http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#hasRating -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#hasRating"/>
+    
+
+
+    <!-- http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#hasRoles -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#hasRoles">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#hasSeriesRating -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#hasSeriesRating">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#hasRating"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#hasVA -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#hasVA">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#hasRoles"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#hasWriter -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#hasWriter">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#hasRoles"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#inCountry -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#inCountry"/>
+    
+
+
+    <!-- http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#inLanguage -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#inLanguage">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#isActorOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#isActorOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#isRoles"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#isCreatorOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#isCreatorOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#isRoles"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#isDirectorOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#isDirectorOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#isRoles"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#isProducedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#isProducedBy"/>
+    
+
+
+    <!-- http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#isRoles -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#isRoles">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#isVAOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#isVAOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#isRoles"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#isWriterOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#isWriterOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#isRoles"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#rated -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#rated"/>
+    
+
+
+    <!-- http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#spokenIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#spokenIn"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Awards -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Awards">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Budget -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Budget">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Plot -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Plot">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Released -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Released">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#date"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Runtime -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Runtime">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Title -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Title">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#name"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Year -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Year">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#date"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#date -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#date">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#firstName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#firstName">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#name"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#imdb -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#imdb"/>
+    
+
+
+    <!-- http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#imdbID -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#imdbID">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#imdb"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#imdbRating -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#imdbRating">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#imdb"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#lastName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#lastName">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#name"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#metascore -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#metascore">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#imdb"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#name">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Action -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Action">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Genre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Actor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Actor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Roles"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Adventure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Adventure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Genre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Animation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Animation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Genre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Comedy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Comedy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Genre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Country -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Country">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Place"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Creator -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Creator">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Roles"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Director -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Director">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Roles"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Drama -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Drama">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Genre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Genre -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Genre"/>
+    
+
+
+    <!-- http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Horror -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Horror">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Genre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Language -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Language"/>
+    
+
+
+    <!-- http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Media -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Media"/>
+    
+
+
+    <!-- http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Movie -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Movie">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Media"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Series"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Person -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Person"/>
+    
+
+
+    <!-- http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Place -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Place"/>
+    
+
+
+    <!-- http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Production -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Production"/>
+    
+
+
+    <!-- http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Rated -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Rated"/>
+    
+
+
+    <!-- http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Roles -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Roles">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Romance -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Romance">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Genre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#ScienceFiction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#ScienceFiction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Genre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Series -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Series">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Media"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Voice_Actors -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Voice_Actors">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Roles"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Writer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Writer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Roles"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#movieRating -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#movieRating">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Rated"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#movieUKRating -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#movieUKRating">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#movieRating"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#movieUSRating -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#movieUSRating">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#movieRating"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#seriesRating -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#seriesRating">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Rated"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Aaron_McGrunder -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Aaron_McGrunder">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Creator"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Person"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Roles"/>
+        <isCreatorOf rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#The_Boondocks"/>
+        <firstName>Aaron</firstName>
+        <imdbID>nm1412298</imdbID>
+        <lastName>McGrunder</lastName>
+        <name>Aaron McGrunder</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Aaron_Paul -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Aaron_Paul">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Actor"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Person"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Roles"/>
+        <isActorOf rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Breaking_Bad"/>
+        <firstName>Aaron</firstName>
+        <imdbID>nm0666739</imdbID>
+        <lastName>Paul</lastName>
+        <name>Aaron Paul</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Adelaide_Production -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Adelaide_Production">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Production"/>
+        <hasProduced rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#The_Boondocks"/>
+        <imdbID>co0061343</imdbID>
+        <name>Adelaide Production</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#BBC_Wales -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#BBC_Wales">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Production"/>
+        <hasProduced rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Dr_Who"/>
+        <imdbID>co0103752</imdbID>
+        <name>BBC Wales</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Billy_Zane -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Billy_Zane">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Actor"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Person"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Roles"/>
+        <isActorOf rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Titanic"/>
+        <firstName>Billy</firstName>
+        <imdbID>nm0000708</imdbID>
+        <lastName>Zane</lastName>
+        <name>Billy Zane</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Breaking_Bad -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Breaking_Bad">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Drama"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Media"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Movie"/>
+        <hasActor rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Aaron_Paul"/>
+        <hasActor rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Bryan_Cranston"/>
+        <hasCreator rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Vince_Gillingan"/>
+        <hasSeriesRating rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#TV-MA"/>
+        <inCountry rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#US"/>
+        <inLanguage rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#English"/>
+        <inLanguage rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Spanish"/>
+        <isProducedBy rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Gran_Via_Productions"/>
+        <isProducedBy rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#High_Bridge_Productions"/>
+        <isProducedBy rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Sony_Pictures_Television"/>
+        <Awards>Won 2 Golden Globes. Another 150 wins &amp; 234 nominations.</Awards>
+        <Budget>Unknown</Budget>
+        <Plot>A high school chemistry teacher diagnosed with inoperable lung cancer turns to manufacturing and selling methamphetamine in order to secure his family&apos;s future.</Plot>
+        <Released>20th January 2008</Released>
+        <Runtime>49min (62 episodes)</Runtime>
+        <Title>Breaking Bad</Title>
+        <Year>2008-2013</Year>
+        <imdbID>tt0903747</imdbID>
+        <imdbRating>9.5/10</imdbRating>
+        <metascore>87/100</metascore>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Bryan_Cranston -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Bryan_Cranston">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Actor"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Person"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Roles"/>
+        <isActorOf rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Breaking_Bad"/>
+        <firstName>Bryan</firstName>
+        <imdbID>nm0186505</imdbID>
+        <lastName>Cranston</lastName>
+        <name>Bryan Cranston</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Carrie_Fisher -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Carrie_Fisher">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Actor"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Person"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Roles"/>
+        <isActorOf rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#SW_IV"/>
+        <firstName>Carrie</firstName>
+        <imdbID>nm0000402</imdbID>
+        <lastName>Fisher</lastName>
+        <name>Carrie Fisher</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Dr_Who -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Dr_Who">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Adventure"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Drama"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Media"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Series"/>
+        <hasActor rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Jodie_Whittaker"/>
+        <hasActor rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Matt_Smith"/>
+        <hasActor rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Peter_Capaldi"/>
+        <hasCreator rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Sydney_Newman"/>
+        <hasSeriesRating rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#TV-PG"/>
+        <inCountry rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#UK"/>
+        <inLanguage rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#English"/>
+        <isProducedBy rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#BBC_Wales"/>
+        <isProducedBy rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#British_Broadcasting_Company_(BBC)"/>
+        <isProducedBy rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Canadian_Broadcasting_Corporation_(CBC)"/>
+        <Awards>115 wins &amp; 204 nominations.</Awards>
+        <Budget>TBD</Budget>
+        <Plot>The further adventures in time and space of the alien adventurer known as the Doctor and their companions from planet Earth.</Plot>
+        <Released>17th March 2006</Released>
+        <Runtime>45min</Runtime>
+        <Runtime>TBD</Runtime>
+        <Title>Dr Who</Title>
+        <Year>2005 -</Year>
+        <imdbID>tt0436992</imdbID>
+        <imdbRating>8.6/10</imdbRating>
+        <metascore>none</metascore>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#English -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#English">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Language"/>
+        <spokenIn rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Breaking_Bad"/>
+        <spokenIn rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Dr_Who"/>
+        <spokenIn rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#SW_IV"/>
+        <spokenIn rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#The_Boondocks"/>
+        <spokenIn rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Titanic"/>
+        <name>English</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#George_Lucas -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#George_Lucas">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Director"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Person"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Writer"/>
+        <isDirectorOf rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#SW_IV"/>
+        <isWriterOf rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#SW_IV"/>
+        <firstName>George</firstName>
+        <imdbID>nm0000184</imdbID>
+        <lastName>Lucas</lastName>
+        <name>George Lucas</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Gran_Via_Productions -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Gran_Via_Productions">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Production"/>
+        <hasProduced rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Breaking_Bad"/>
+        <imdbID>co0071947</imdbID>
+        <name>Gran Via Productions</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Harrison_Ford -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Harrison_Ford">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Actor"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Person"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Roles"/>
+        <isActorOf rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#SW_IV"/>
+        <firstName>Harrison</firstName>
+        <imdbID>nm0000148</imdbID>
+        <lastName>Ford</lastName>
+        <name>Harrison Ford</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#High_Bridge_Productions -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#High_Bridge_Productions">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Production"/>
+        <hasProduced rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Breaking_Bad"/>
+        <imdbID>co0212797</imdbID>
+        <name>High Bridge Productions</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Italian -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Italian">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Language"/>
+        <spokenIn rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Titanic"/>
+        <name>Italian</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#James_Cameron -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#James_Cameron">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Director"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Person"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Roles"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Writer"/>
+        <isDirectorOf rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Titanic"/>
+        <isWriterOf rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Titanic"/>
+        <firstName>James</firstName>
+        <imdbID>nm0000116</imdbID>
+        <lastName>Cameron</lastName>
+        <name>James Cameron</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Jodie_Whittaker -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Jodie_Whittaker">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Actor"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Person"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Roles"/>
+        <isActorOf rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Dr_Who"/>
+        <firstName>Jodie</firstName>
+        <imdbID>nm2092886</imdbID>
+        <lastName>Whittaker</lastName>
+        <name>Jodie Whittaker</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#John_Witherspoon -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#John_Witherspoon">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Person"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Roles"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Voice_Actors"/>
+        <isVAOf rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#The_Boondocks"/>
+        <firstName>John</firstName>
+        <imdbID>nm0936762</imdbID>
+        <lastName>Witherspoon</lastName>
+        <name>John Witherspoon</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Kate_Winslet -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Kate_Winslet">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Actor"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Person"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Roles"/>
+        <isActorOf rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Titanic"/>
+        <firstName>Kate</firstName>
+        <imdbID>nm0000701</imdbID>
+        <lastName>Winslet</lastName>
+        <name>Kate Winslet</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Leonardo_DiCaprio -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Leonardo_DiCaprio">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Actor"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Person"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Roles"/>
+        <isActorOf rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Titanic"/>
+        <firstName>Leonardo</firstName>
+        <imdbID>nm0000138</imdbID>
+        <lastName>DiCaprio</lastName>
+        <name>Leonardo DiCaprio</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Lightstorm_Entertaintment -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Lightstorm_Entertaintment">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Production"/>
+        <hasProduced rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Titanic"/>
+        <imdbID>co0038663</imdbID>
+        <name>Lightstorm Entertaintment</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Lucasfilm -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Lucasfilm">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Production"/>
+        <hasProduced rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#SW_IV"/>
+        <imdbID>co0071326</imdbID>
+        <name>Lucasfilm</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Mark_Hamill -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Mark_Hamill">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Actor"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Person"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Roles"/>
+        <isActorOf rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#SW_IV"/>
+        <firstName>Mark</firstName>
+        <imdbID>nm0000434</imdbID>
+        <lastName>Hamil</lastName>
+        <name>Mark Hamill</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Matt_Smith -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Matt_Smith">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Actor"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Person"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Roles"/>
+        <isActorOf rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Dr_Who"/>
+        <firstName>Matt</firstName>
+        <imdbID>nm1741002</imdbID>
+        <lastName>Smith</lastName>
+        <name>Matt Smith</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#PG -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#PG">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Rated"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#movieRating"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#movieUKRating"/>
+        <rated rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#SW_IV"/>
+        <name>PG</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#PG-13 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#PG-13">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Rated"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#movieRating"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#movieUSRating"/>
+        <rated rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Titanic"/>
+        <name>PG-13</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Paramount_Pictures -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Paramount_Pictures">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Production"/>
+        <hasProduced rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Titanic"/>
+        <imdbID>co0023400</imdbID>
+        <name>Paramount Pictures</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Peter_Capaldi -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Peter_Capaldi">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Actor"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Person"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Roles"/>
+        <isActorOf rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Dr_Who"/>
+        <firstName>Capaldi</firstName>
+        <firstName>Peter</firstName>
+        <imdbID>nm0134922</imdbID>
+        <name>Peter Capaldi</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Rebel_Base -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Rebel_Base">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Production"/>
+        <hasProduced rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#The_Boondocks"/>
+        <imdbID>co0165905</imdbID>
+        <name>Rebel Base</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Regina_King -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Regina_King">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Person"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Roles"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Voice_Actors"/>
+        <isVAOf rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#The_Boondocks"/>
+        <firstName>Regina</firstName>
+        <imdbID>nm0005093</imdbID>
+        <lastName>King</lastName>
+        <name>Regina King</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#SW_IV -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#SW_IV">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Action"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Adventure"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Media"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Movie"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#ScienceFiction"/>
+        <hasActor rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Carrie_Fisher"/>
+        <hasActor rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Harrison_Ford"/>
+        <hasActor rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Mark_Hamill"/>
+        <hasDirector rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#George_Lucas"/>
+        <hasMovieUSRating rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#PG"/>
+        <hasWriter rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#George_Lucas"/>
+        <inCountry rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#US"/>
+        <inLanguage rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#English"/>
+        <isProducedBy rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Lucasfilm"/>
+        <isProducedBy rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Twentieth_Century_Fox"/>
+        <Awards>Won 6 Oscars. Another 52 wins &amp; 28 nominations.</Awards>
+        <Budget>$11,000,000 (estimated)</Budget>
+        <Plot>Luke Skywalker joins forces with a Jedi Knight, a cocky pilot, a Wookiee and two droids to save the galaxy from the Empire&apos;s world-destroying battle station, while also attempting to rescue Princess Leia from the mysterious Darth Vader.</Plot>
+        <Released>25th May 1977</Released>
+        <Title>Star Wars: Episode IV - A New Hope</Title>
+        <Year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1977</Year>
+        <imdbID>tt0076759</imdbID>
+        <imdbRating>8.6/10</imdbRating>
+        <metascore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">90</metascore>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Sony_Pictures_Television -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Sony_Pictures_Television">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Production"/>
+        <hasProduced rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Breaking_Bad"/>
+        <hasProduced rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#The_Boondocks"/>
+        <imdbID>co0086397</imdbID>
+        <name>Sony Pictures Television</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Spanish -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Spanish">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Language"/>
+        <spokenIn rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Breaking_Bad"/>
+        <name>Spanish</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Swedish -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Swedish">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Language"/>
+        <spokenIn rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Titanic"/>
+        <name>Swedish</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Sydney_Newman -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Sydney_Newman">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Creator"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Person"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Roles"/>
+        <isCreatorOf rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Dr_Who"/>
+        <firstName>Sydney</firstName>
+        <imdbID>nm0628285</imdbID>
+        <lastName>Newman</lastName>
+        <name>Sydney Newman</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#TV-MA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#TV-MA">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Rated"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#seriesRating"/>
+        <rated rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Breaking_Bad"/>
+        <rated rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#The_Boondocks"/>
+        <Title>TV-MA</Title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#TV-PG -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#TV-PG">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Rated"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#seriesRating"/>
+        <rated rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Dr_Who"/>
+        <name>TV-PG</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#The_Boondocks -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#The_Boondocks">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Action"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Animation"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Comedy"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Media"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Series"/>
+        <hasCreator rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Aaron_McGrunder"/>
+        <hasSeriesRating rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#TV-MA"/>
+        <hasVA rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#John_Witherspoon"/>
+        <hasVA rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Regina_King"/>
+        <inCountry rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#US"/>
+        <inLanguage rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#English"/>
+        <isProducedBy rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Adelaide_Production"/>
+        <isProducedBy rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Rebel_Base"/>
+        <isProducedBy rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Sony_Pictures_Television"/>
+        <Awards>4 wins &amp; 5 nominations.</Awards>
+        <Budget>TBD</Budget>
+        <Plot>Based on the comic strip, Huey and Riley move away from the city and out to the suburbs with their irascible grandfather. Biting socio-political commentary ensues.</Plot>
+        <Released>6th November 2015</Released>
+        <Runtime>22min (56 episodes)</Runtime>
+        <Title>The Boondocks</Title>
+        <Year>2005 - 2014</Year>
+        <imdbID>tt0373732</imdbID>
+        <imdbRating>8.5/10</imdbRating>
+        <metascore>none</metascore>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Titanic -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Titanic">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Drama"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Media"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Movie"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Romance"/>
+        <hasActor rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Billy_Zane"/>
+        <hasActor rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Kate_Winslet"/>
+        <hasActor rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Leonardo_DiCaprio"/>
+        <hasDirector rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#James_Cameron"/>
+        <hasMovieUSRating rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#PG-13"/>
+        <hasWriter rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#James_Cameron"/>
+        <inCountry rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#US"/>
+        <inLanguage rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#English"/>
+        <inLanguage rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Italian"/>
+        <inLanguage rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Swedish"/>
+        <isProducedBy rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Lightstorm_Entertaintment"/>
+        <isProducedBy rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Paramount_Pictures"/>
+        <isProducedBy rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Twentieth_Century_Fox"/>
+        <Awards>Won 11 Oscars. Another 115 wins &amp; 80 nominations</Awards>
+        <Budget>$200,000,000 (estimated)</Budget>
+        <Plot>A seventeen-year-old aristocrat falls in love with a kind but poor artist aboard the luxurious, ill-fated R.M.S. Titanic.</Plot>
+        <Released>19th December 1997</Released>
+        <Runtime>3h 14min</Runtime>
+        <Title>Titanic</Title>
+        <Year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1997</Year>
+        <imdbID>tt0120338</imdbID>
+        <imdbRating>7.8/10</imdbRating>
+        <metascore>75/100</metascore>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Twentieth_Century_Fox -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Twentieth_Century_Fox">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Production"/>
+        <hasProduced rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#SW_IV"/>
+        <hasProduced rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Titanic"/>
+        <imdbID>co0000756</imdbID>
+        <name>Twentieth Century Fox</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#UK -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#UK">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Country"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Place"/>
+        <hasFilmed rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Dr_Who"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#US -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#US">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Country"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Place"/>
+        <hasFilmed rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Breaking_Bad"/>
+        <hasFilmed rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#SW_IV"/>
+        <hasFilmed rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#The_Boondocks"/>
+        <hasFilmed rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Titanic"/>
+        <name>United States</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Vince_Gillingan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Vince_Gillingan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Creator"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Person"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Roles"/>
+        <isCreatorOf rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Breaking_Bad"/>
+        <firstName>Vince</firstName>
+        <imdbID>nm0319213</imdbID>
+        <lastName>Gillingan</lastName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#British_Broadcasting_Company_(BBC) -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#British_Broadcasting_Company_(BBC)">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Production"/>
+        <hasProduced rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Dr_Who"/>
+        <imdbID>co0043107</imdbID>
+        <name>British Broadcasting COmpany (BBC)</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Canadian_Broadcasting_Corporation_(CBC) -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Canadian_Broadcasting_Corporation_(CBC)">
+        <rdf:type rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Production"/>
+        <hasProduced rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Dr_Who"/>
+        <imdbID>co0045850</imdbID>
+        <name>Canadian Broadcasting Corporation</name>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

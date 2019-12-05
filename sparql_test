@@ -1,0 +1,106 @@
+list of movie and series
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?title ?awards ?tvRating ?usMRating ?ukMRating
+WHERE {
+ ?m a owl:Media.
+ ?m owl:Title ?title.
+OPTIONAL {?m owl:hasSeriesRating ?tvRating.}
+OPTIONAL {?m owl:hasMovieUSRating ?usMRating.}
+OPTIONAL {?m owl:hasMovieUKRating ?ukMRating.}
+OPTIONAL {?m owl:Awards ?awards.}
+}
+////////////////////////////////////////////////////////
+Director for movies
+
+SELECT ?dname ?mTitle ?plot
+WHERE {
+ ?d a owl:Director.
+ ?d owl:name ?dname.
+
+{?d owl:isDirectorOf ?movies.
+ ?movies owl:Title ?mTitle.
+ ?movies owl:Plot ?plot.}
+}
+
+////////////////////////////////////////////////////////
+Actor list with their corresponding movies
+
+SELECT ?aName ?id ?mTitle 
+WHERE {
+?a a owl:Actor.
+ ?a owl:name ?aName.
+ ?a owl:imdbID ?id
+
+{?a owl:isActorOf ?media.
+ ?a owl:Title ?mTitle.}
+UNION
+{?mTitle owl:hasActor ?a}
+
+}ORDER BY ASC(?mTitle)
+
+////////////////////////////////////////////////////////
+Media Details
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?mTitle ?actorName ?actorID ?directorName ?directorID ?creatorName ?creatorID ?writerName ?writerID ?vaName ?vaID ?pName ?pID ?awards
+WHERE { 
+?m a owl:Media.
+ ?m owl:Title ?mTitle FILTER regex(STR(?mTitle), "").
+ ?m owl:Awards ?awards.
+
+OPTIONAL{
+{?a a owl:Actor.
+ ?a owl:isActorOf ?m.
+ ?a owl:name ?actorName.
+ ?a owl:imdbID ?actorID}
+UNION
+{?mTitle owl:hasActor ?a}}
+
+OPTIONAL{
+{?d a owl:Director.
+ ?d owl:isDirectorOf ?m.
+ ?d owl:name ?directorName.
+ ?d owl:imdbID ?directorID}
+UNION
+{?mTitle owl:hasDirector ?d}}
+
+OPTIONAL{
+{?c a owl:Creator.
+ ?c owl:isCreatorOf ?m.
+ ?c owl:name ?creatorName.
+ ?c owl:imdbID ?creatorID}
+UNION
+{?mTitle owl:hasCreator ?c}}
+
+OPTIONAL{
+{?w a owl:Writer.
+ ?w owl:isWriterOf ?m.
+ ?w owl:name ?writerName.
+ ?w owl:imdbID ?writerID}
+UNION
+{?mTitle owl:hasWriter ?w}}
+
+OPTIONAL{
+{?va owl:isVAOf ?m.
+ ?va owl:name ?vaName.
+ ?va owl:imdbID ?vaID}
+UNION
+{?mTitle owl:hasVA ?va}}
+
+OPTIONAL{
+{?p owl:hasProduced ?m.
+ ?p owl:name ?pName.
+ ?p owl:imdbID ?pID}
+UNION
+{?mTitle owl:hasProduced ?p}}
+}
+

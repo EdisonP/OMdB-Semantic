@@ -74,7 +74,6 @@ public class SearchPerson extends JFrame {
 		});
 	}
 
-	// Creating the frame
 	public SearchPerson() {
 		setFont(new Font("Arial", Font.PLAIN, 14));
 		setIconImage(Toolkit.getDefaultToolkit().getImage("./resources/images/semantic.png"));
@@ -104,21 +103,22 @@ public class SearchPerson extends JFrame {
 
 		menu = new JComboBox<String>();
 
-		JButton btnSearchPeople = new JButton("Return");
-		btnSearchPeople.setFocusTraversalKeysEnabled(false);
-		btnSearchPeople.setFocusPainted(false);
-		btnSearchPeople.setBackground(SystemColor.controlHighlight);
-		btnSearchPeople.setFont(new Font("Tahoma", Font.PLAIN, 24));
-		btnSearchPeople.setBounds(20, 20, 350, 45);
-		btnSearchPeople.setPreferredSize(new Dimension(25, 100));
-		btnSearchPeople.addActionListener(new ActionListener() {
+		// Return to main menu
+		JButton btnReturn = new JButton("Return");
+		btnReturn.setFocusTraversalKeysEnabled(false);
+		btnReturn.setFocusPainted(false);
+		btnReturn.setBackground(SystemColor.controlHighlight);
+		btnReturn.setFont(new Font("Tahoma", Font.PLAIN, 24));
+		btnReturn.setBounds(20, 20, 350, 45);
+		btnReturn.setPreferredSize(new Dimension(25, 100));
+		btnReturn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				new mainMenu().setVisible(true);
 				castsFrame.dispose();
 			}
 		});
-		contentPane.add(btnSearchPeople);
-		
+		contentPane.add(btnReturn);
+
 		// loads casts into dropbox
 		try {
 			ResultSet results = qexec.execSelect();
@@ -140,10 +140,23 @@ public class SearchPerson extends JFrame {
 					// retrieving casts's imdbID & etc
 					String query_text = prefix + "SELECT ?name ?imdbID "
 							+ "(GROUP_CONCAT(DISTINCT str(?mTitle);separator=';') AS ?medias)"
-							+ "WHERE {?p a owl:Person." + "?p owl:name ?name." + "?p owl:imdbID ?imdbID." + "OPTIONAL{"
-							+ "{?p owl:isActorOf ?m." + "?m owl:Title ?mTitle.}" + "UNION" + "{?m owl:hasActor ?p."
-							+ "?p owl:name ?name}}" + " FILTER(str(?name)=\"" + aName + "\")" + "}"
-							+ " GROUP BY ?name ?imdbID ?mTitle";
+							+ "WHERE {?p a owl:Person." + "?p owl:name ?name." + "?p owl:imdbID ?imdbID."
+					// retrieve actor
+							+ "OPTIONAL{" + "{?p owl:isActorOf ?a." + "?a owl:Title ?mTitle.}" + "UNION"
+							+ "{?a owl:hasActor ?p." + "?p owl:name ?name}}"
+					// retrieve director
+							+ "OPTIONAL{" + "{?p owl:isDirectorOf ?d." + "?d owl:Title ?mTitle.}" + "UNION"
+							+ "{?d owl:hasDirector ?p." + "?p owl:name ?name}}"
+					// retrieve voice actor
+							+ "OPTIONAL{" + "{?p owl:isVAOf ?va." + "?va owl:Title ?mTitle.}" + "UNION"
+							+ "{?va owl:hasVA ?p." + "?p owl:name ?name}}"
+					// retrieve creator
+							+ "OPTIONAL{" + "{?p owl:isCreatorOf ?c." + "?c owl:Title ?mTitle.}" + "UNION"
+							+ "{?c owl:hasCreator ?p." + "?p owl:name ?name}}"
+					// retrieve writer
+							+ "OPTIONAL{" + "{?p owl:isWriterOf ?w." + "?w owl:Title ?mTitle.}" + "UNION"
+							+ "{?w owl:hasWriter ?p." + "?p owl:name ?name}}" + " FILTER(str(?name)=\"" + aName + "\")"
+							+ "}" + " GROUP BY ?name ?imdbID ?mTitle";
 
 					Query query = QueryFactory.create(query_text);
 					QueryExecution qexec = QueryExecutionFactory.create(query, m);
@@ -153,18 +166,21 @@ public class SearchPerson extends JFrame {
 						DefaultListModel<String> listModel = new DefaultListModel<String>();
 						while (results.hasNext()) {
 							QuerySolution qs = results.next();
-							if (qs.get("medias").toString() != null){
-								String[] mediaList = qs.get("medias").split(";");
-							for (int i = 0; i < mediaList.length; i++) {
-								System.out.println("-----" + mediaList[i]);
-								listModel.addElement(mediaList[i].toString());
-							}}
-							imdbID.setText(qs.get("imdbID").toString());
+							if (results.next() != null) {
+								if (qs.get("medias").toString() != null) {
+									String[] mediaList = qs.get("medias").toString().split(";");
+									for (int i = 0; i < mediaList.length; i++) {
+										System.out.println(mediaList[i]);
+										listModel.addElement(mediaList[i].toString());
+									}
+								}
+								imdbID.setText(qs.get("imdbID").toString());
+							}
+							mediaList.setModel(listModel);
 						}
-						mediaList.setModel(listModel);
-					}catch(NullPointerException e1) {
+					} catch (NullPointerException e1) {
 						e1.getMessage();
-						System.out.println("test");
+						System.out.println("Error");
 					} finally {
 						qexec.close();
 					}
@@ -206,12 +222,10 @@ public class SearchPerson extends JFrame {
 		lbl_imdbID.setBounds(12, 86, 140, 26);
 		panel.add(lbl_imdbID);
 		imdbID.setFont(new Font("Tahoma", Font.PLAIN, 17));
-
 		imdbID.setBounds(164, 86, 140, 26);
 		panel.add(imdbID);
-
-		// casted in which media
-		//mediaList not showing, but has element in it
+		
+		
 		JLabel lblMediaList = new JLabel("Casted In:");
 		lblMediaList.setFont(new Font("Cambria", Font.BOLD, 17));
 		lblMediaList.setBounds(12, 180, 81, 40);
@@ -228,6 +242,7 @@ public class SearchPerson extends JFrame {
 				return values[index];
 			}
 		});
+
 		mediaList.setFont(new Font("Times New Roman", Font.PLAIN, 17));
 		mediaList.setBounds(164, 232, 277, 200);
 		panel.add(mediaList);

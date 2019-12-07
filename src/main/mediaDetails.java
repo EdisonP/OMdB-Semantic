@@ -45,35 +45,33 @@ import javax.swing.AbstractListModel;
 
 @SuppressWarnings("serial")
 public class mediaDetails extends JFrame {
-	
+
 	// Directory where we've stored the local data files, such as places.owl
-    public static final String SOURCE = "./resources/ontologies/";
-    public static final String OMDb = "http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#";
-    
+	public static final String SOURCE = "./resources/ontologies/";
+	public static final String OMDb = "http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#";
+
 	private JPanel contentPane;
 	private JComboBox<String> menu;
 	private JLabel mediaTitle = new JLabel(".......");
+	private JLabel imdbID = new JLabel("...");
 	private JLabel plot = new JLabel("...");
-	private JList<String> actorList = new JList<String>();
+	private JList<String> castsList = new JList<String>();
 	private JLabel picture = new JLabel("");
 
-	OntModel m = ModelFactory.createOntologyModel( OntModelSpec.OWL_MEM );
+	OntModel m = ModelFactory.createOntologyModel(OntModelSpec.OWL_MEM);
 	String prefix = "";
-	
-	/****************** Define ScrollPane that will load JTable in it ****************************/
-	private JScrollPane sp=new JScrollPane();
-	
-	/********************************************************************************************/
-	
+
+	private JScrollPane sp = new JScrollPane();
+
 	public static mediaDetails mediaFrame = new mediaDetails();
 
 	public static void main(String[] args) {
-	
+
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
 					mediaFrame.setVisible(true);
-					
+
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -81,9 +79,6 @@ public class mediaDetails extends JFrame {
 		});
 	}
 
-	/**
-	 * Create the frame.
-	 */
 	public mediaDetails() {
 		setFont(new Font("Arial", Font.PLAIN, 14));
 		setIconImage(Toolkit.getDefaultToolkit().getImage("./resources/images/semantic.png"));
@@ -97,138 +92,164 @@ public class mediaDetails extends JFrame {
 		contentPane.setMaximumSize(new Dimension(400, 400));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
-		
-		/*********************************Load Menu**********************************************/
-		
-		//read ontology model
-		FileManager.get().readModel( m, SOURCE + "OMdB_Semantic.owl" );
-		
-		prefix ="prefix rdfs: <" + RDFS.getURI() + ">\n" +
-				"prefix owl: <" + OMDb + ">\n";
 
-		//sparql to read movie title
-		String query_text=  prefix
-					+ "SELECT ?mTitle " 
-				+ "	WHERE { ?m a owl:Media."
-					+ "?m owl:Title ?mTitle \r\n"
-					+ "} ORDER BY ASC(?mTitle)" ;  
-		
-		Query query = QueryFactory.create( query_text );
-        QueryExecution qexec = QueryExecutionFactory.create( query, m );
-       
-        menu = new JComboBox<String>();
-        
-        //loads media into dropbox
-        try {
-            ResultSet results = qexec.execSelect();
-            while ( results.hasNext() ) {
-                QuerySolution qs = results.next();
-                menu.addItem(qs.get("mTitle").toString());
-            }
-          
-        }
-        finally {
-            qexec.close();
-        }
-        
-        menu.addItemListener(new ItemListener() {
-        	public void itemStateChanged(ItemEvent e) {
-        		if(e.getStateChange()==1) {
-        			String mTitle = menu.getSelectedItem().toString();
-        			mediaTitle.setText(mTitle);
-        			//retrieving media's plot, actor, etc
-            		
-        			String query_text=  prefix +
-        					//not getting actors name or plot
-        					"SELECT ?plot ?aName (GROUP_CONCAT(DISTINCT str(?aName);separator=';') AS ?actors) "+
-        							"WHERE {?m a owl:Media."+
-        							"?m owl:Title ?title."+
-        							"?m owl:Plot ?plot."+
-        							"{?m owl:hasActor ?a."+
-        							"?a owl:name ?aName}"+
-        							"UNION"+
-        							"{?a owl:isActorOf ?m."+ 
-        							"?a owl:name ?aName.} "+
-        							"FILTER(str(?mTitle)=\""+mTitle+"\")"+"}"+
-        							" GROUP BY ?plot ?aName";
-		    		//System.out.println(query_text);
-		    		
-		    		Query query = QueryFactory.create( query_text );
-		            QueryExecution qexec = QueryExecutionFactory.create( query, m );
-		           		            
-		            try {
-		                ResultSet results = qexec.execSelect();
-		                DefaultListModel<String> listModel = new DefaultListModel<String>();
-		                while ( results.hasNext() ) {
-		                    QuerySolution qs = results.next();
-		                    String[] actorList = qs.get("aName").toString().split(";");
-		                    for(int i=0; i<actorList.length; i++ ) {
-		                    	listModel.addElement(actorList[i].toString());
-		                    }
-		                    System.out.println(qs.get("plot"));
-		        			plot.setText(qs.get("plot").toString());
-		                }
-		              actorList.setModel(listModel);
-		            }
-		            finally {
-		                qexec.close();
-		            }
-        		}
+		// read ontology model
+		FileManager.get().readModel(m, SOURCE + "OMdB_Semantic.owl");
 
-        	}
-        });
+		prefix = "prefix rdfs: <" + RDFS.getURI() + ">\n" + "prefix owl: <" + OMDb + ">\n";
+
+		// sparql to read movie title
+		String query_text = prefix + "SELECT ?mTitle " + "	WHERE { ?m a owl:Media." + "?m owl:Title ?mTitle \r\n"
+				+ "} ORDER BY ASC(?mTitle)";
+
+		Query query = QueryFactory.create(query_text);
+		QueryExecution qexec = QueryExecutionFactory.create(query, m);
+
+		menu = new JComboBox<String>();
+
+		// Return to main menu
+		JButton btnReturn = new JButton("Return");
+		btnReturn.setFocusTraversalKeysEnabled(false);
+		btnReturn.setFocusPainted(false);
+		btnReturn.setBackground(SystemColor.controlHighlight);
+		btnReturn.setFont(new Font("Tahoma", Font.PLAIN, 24));
+		btnReturn.setBounds(20, 20, 350, 45);
+		btnReturn.setPreferredSize(new Dimension(25, 100));
+		btnReturn.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				new mainMenu().setVisible(true);
+				mediaFrame.dispose();
+			}
+		});
+		contentPane.add(btnReturn);
+
+		// loads media into dropbox
+		try {
+			ResultSet results = qexec.execSelect();
+			while (results.hasNext()) {
+				QuerySolution qs = results.next();
+				menu.addItem(qs.get("mTitle").toString());
+			}
+
+		} finally {
+			qexec.close();
+		}
+
+		menu.addItemListener(new ItemListener() {
+			public void itemStateChanged(ItemEvent e) {
+				if (e.getStateChange() == 1) {
+					String mTitle = menu.getSelectedItem().toString();
+					mediaTitle.setText(mTitle);
+					// retrieving media's plot, actor, etc
+
+					String query_text = prefix +
+					// not getting actors name or plot
+					"SELECT ?mTitle ?imdbID ?plot" + "(GROUP_CONCAT(DISTINCT str(?name);separator=';') AS ?casts)"
+							+ "WHERE {?m a owl:Media." + "?m owl:Title ?mTitle." + "?m owl:Plot ?plot."
+							+ "?m owl:imdbID ?imdbID."
+
+							+ "OPTIONAL{" + "{?m owl:hasActor ?a." + "?a owl:name ?name.}" + "UNION"
+							+ "{?a owl:isActorOf ?m." + "?a owl:name ?name}} "
+
+							+ "OPTIONAL{{?m owl:hasDirector? ?d." + "?d owl:name ?name.}" + "UNION"
+							+ "{?d owl:isDirectorOf ?m." + "?d owl:name ?name}} "
+
+							+ "OPTIONAL{{?m owl:hasVA ?va." + "?va owl:name ?name.}" + "UNION" + "{?va owl:isVAOf ?m."
+							+ "?va owl:name ?name}} "
+
+							+ "OPTIONAL{{?m owl:hasCreator ?c." + "?c owl:name ?name.}" + "UNION"
+							+ "{?c owl:isCreatorOf ?m." + "?c owl:name ?name}} "
+
+							+ "OPTIONAL{{?m owl:hasWriter ?w." + "?w owl:name ?name.}" + "UNION"
+							+ "{?w owl:isWriterOf ?m." + "?w owl:name ?name}} "
+
+							+ "FILTER(str(?mTitle)=\"" + mTitle + "\")" + "}" + " GROUP BY ?mTitle ?imdbID ?plot ?name";
+
+					Query query = QueryFactory.create(query_text);
+					QueryExecution qexec = QueryExecutionFactory.create(query, m);
+
+					try {
+						ResultSet results = qexec.execSelect();
+						DefaultListModel<String> listModel = new DefaultListModel<String>();
+						while (results.hasNext()) {
+							QuerySolution qs = results.next();
+							String[] castsList = qs.get("casts").toString().split(";");
+							for (int i = 0; i < castsList.length; i++) {
+								listModel.addElement(castsList[i].toString());
+							}
+							imdbID.setText(qs.get("imdbID").toString());
+							plot.setText("<html>" + qs.get("plot").toString() + "</html>");
+						}
+						castsList.setModel(listModel);
+					} finally {
+						qexec.close();
+					}
+				}
+
+			}
+		});
 		contentPane.setLayout(null);
-		
+
 		JLabel lblSMedia = new JLabel("Select Media:");
 		lblSMedia.setFont(new Font("Cambria", Font.BOLD, 36));
 		lblSMedia.setForeground(new Color(0, 128, 128));
 		lblSMedia.setBounds(50, 74, 264, 45);
 		contentPane.add(lblSMedia);
-		
+
 		menu.setBackground(UIManager.getColor("ComboBox.buttonBackground"));
 		menu.setForeground(SystemColor.desktop);
 		menu.setBounds(291, 81, 305, 36);
 		contentPane.add(menu);
-		
+
 		Panel panel = new Panel();
 		panel.setBounds(24, 169, 644, 486);
 		contentPane.add(panel);
 		panel.setLayout(null);
 		plot.setForeground(new Color(70, 130, 180));
 		plot.setBounds(80, 17, 225, 40);
-		
-		//plot
+
+		// imdbID
+		panel.add(imdbID);
+		imdbID.setFont(new Font("Times New Roman", Font.BOLD, 25));
+		JLabel lblimdbID;
+		lblimdbID = new JLabel("IMdB ID:");
+		lblimdbID.setFont(new Font("Cambria", Font.BOLD, 17));
+		lblimdbID.setBounds(12, 50, 140, 26);
+		panel.add(lblimdbID);
+		lblimdbID.setFont(new Font("Times New Roman", Font.PLAIN, 17));
+		imdbID.setBounds(164, 50, 140, 26);
 		panel.add(plot);
-		plot.setFont(new Font("Times New Roman", Font.BOLD, 25));
+
+		// plot
+		panel.add(plot);
+		plot.setFont(new Font("Times New Roman", Font.BOLD, 13));
 		JLabel lblPlot;
 		lblPlot = new JLabel("Plot:");
 		lblPlot.setFont(new Font("Cambria", Font.BOLD, 17));
 		lblPlot.setBounds(12, 86, 140, 26);
 		panel.add(lblPlot);
 		lblPlot.setFont(new Font("Times New Roman", Font.PLAIN, 17));
-		plot.setBounds(164, 86, 140, 26);
+		plot.setBounds(164, 86, 400, 100);
 		panel.add(plot);
-		
-		JLabel lblActorList = new JLabel("Actors:");
-		lblActorList.setFont(new Font("Cambria", Font.BOLD, 17));
-		lblActorList.setBounds(12, 230, 81, 26);
-		panel.add(lblActorList);
-		lblActorList.setSize(new Dimension(350, 300));
-		actorList.setModel(new AbstractListModel() {
+
+		JLabel lblcastsList = new JLabel("Casts:");
+		lblcastsList.setFont(new Font("Cambria", Font.BOLD, 17));
+		lblcastsList.setBounds(12, 180, 81, 40);
+		panel.add(lblcastsList);
+		lblcastsList.setSize(new Dimension(350, 300));
+		castsList.setModel(new AbstractListModel() {
 			String[] values = new String[] {};
+
 			public int getSize() {
 				return values.length;
 			}
+
 			public Object getElementAt(int index) {
 				return values[index];
 			}
 		});
-		
-		actorList.setFont(new Font("Times New Roman", Font.PLAIN, 17));
-		actorList.setBounds(164, 232, 277, 200);
-		panel.add(actorList);
-		
-		//flag.setBounds(12, 17, 66, 32);
-		//panel.add(flag);
+		castsList.setFont(new Font("Times New Roman", Font.PLAIN, 17));
+		castsList.setBounds(164, 232, 277, 200);
+		panel.add(castsList);
 	}
 }

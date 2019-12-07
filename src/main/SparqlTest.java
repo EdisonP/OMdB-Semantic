@@ -56,3 +56,19 @@ public class SparqlTest {
 	}
 
 }
+
+/*
+ * 
+							+ "OPTIONAL{{?m owl:hasDirecotr? d." + "?d owl:name ?name.}" + "UNION"
+							+ "{?d owl:isDirectorOf ?m." + "?d owl:name ?name}} "
+
+							+ "OPTIONAL{{?m owl:hasVA ?va." + "?va owl:name ?name.}" + "UNION" + "{?va owl:isVAOf ?m."
+							+ "?va owl:name ?name}} "
+
+							+ "OPTIONAL{{?m owl:hasCreator ?c." + "?c owl:name ?name.}" + "UNION"
+							+ "{?c owl:isCreatorOf ?m." + "?c owl:name ?name}} "
+
+							+ "OPTIONAL{{?m owl:hasWriter ?w." + "?w owl:name ?name.}" + "UNION"
+							+ "{?w owl:isWriterOf ?m." + "?w owl:name ?name}} "
+ * 
+ */

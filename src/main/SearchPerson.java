@@ -78,7 +78,6 @@ public class SearchPerson extends JFrame {
 		setFont(new Font("Arial", Font.PLAIN, 14));
 		setIconImage(Toolkit.getDefaultToolkit().getImage("./resources/images/semantic.png"));
 		setTitle("Semantic Media Search");
-
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setResizable(false);
 		setPreferredSize(new Dimension(800, 800));
@@ -224,8 +223,7 @@ public class SearchPerson extends JFrame {
 		imdbID.setFont(new Font("Tahoma", Font.PLAIN, 17));
 		imdbID.setBounds(164, 86, 140, 26);
 		panel.add(imdbID);
-		
-		
+
 		JLabel lblMediaList = new JLabel("Casted In:");
 		lblMediaList.setFont(new Font("Cambria", Font.BOLD, 17));
 		lblMediaList.setBounds(12, 180, 81, 40);

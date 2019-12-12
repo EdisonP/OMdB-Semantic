@@ -142,26 +142,18 @@ public class mediaDetails extends JFrame {
 					mediaTitle.setText(mTitle);
 					// retrieving media's plot, actor, etc
 
-					String query_text = prefix +
-					// not getting actors name or plot
-					"SELECT ?mTitle ?imdbID ?plot" + "(GROUP_CONCAT(DISTINCT str(?name);separator=';') AS ?casts)"
-							+ "WHERE {?m a owl:Media." + "?m owl:Title ?mTitle." + "?m owl:Plot ?plot."
-							+ "?m owl:imdbID ?imdbID."
-
-							+ "OPTIONAL{" + "{?m owl:hasActor ?a." + "?a owl:name ?name.}" + "UNION"
-							+ "{?a owl:isActorOf ?m." + "?a owl:name ?name}} "
-
-							+ "OPTIONAL{{?m owl:hasDirector? ?d." + "?d owl:name ?name.}" + "UNION"
-							+ "{?d owl:isDirectorOf ?m." + "?d owl:name ?name}} "
-
-							+ "OPTIONAL{{?m owl:hasVA ?va." + "?va owl:name ?name.}" + "UNION" + "{?va owl:isVAOf ?m."
-							+ "?va owl:name ?name}} "
-
-							+ "OPTIONAL{{?m owl:hasCreator ?c." + "?c owl:name ?name.}" + "UNION"
-							+ "{?c owl:isCreatorOf ?m." + "?c owl:name ?name}} "
-
-							+ "OPTIONAL{{?m owl:hasWriter ?w." + "?w owl:name ?name.}" + "UNION"
-							+ "{?w owl:isWriterOf ?m." + "?w owl:name ?name}} "
+					String query_text = prefix + "SELECT ?mTitle ?imdbID ?plot"
+							+ "(GROUP_CONCAT(DISTINCT str(?name);separator=';') AS ?casts)" + "WHERE {?m a owl:Media."
+							+ "?m owl:Title ?mTitle." + "?m owl:Plot ?plot." + "?m owl:imdbID ?imdbID." + "UNION"
+							+ "{OPTIONAL{" + "{?m owl:hasActor ?a." + "?a owl:name ?name.}" + "UNION"
+							+ "{?a owl:isActorOf ?m." + "?a owl:name ?name}}} " + "UNION"
+							+ "{OPTIONAL{{?m owl:hasDirector? ?d." + "?d owl:name ?name.}" + "UNION"
+							+ "{?d owl:isDirectorOf ?m." + "?d owl:name ?name}}} " + "UNION"
+							+ "{OPTIONAL{{?m owl:hasVA ?va." + "?va owl:name ?name.}" + "UNION" + "{?va owl:isVAOf ?m."
+							+ "?va owl:name ?name}}}" + "UNION" + "{OPTIONAL{{?m owl:hasCreator ?c."
+							+ "?c owl:name ?name.}" + "UNION" + "{?c owl:isCreatorOf ?m." + "?c owl:name ?name}}} "
+							+ "UNION" + "{OPTIONAL{{?m owl:hasWriter ?w." + "?w owl:name ?name.}" + "UNION"
+							+ "{?w owl:isWriterOf ?m." + "?w owl:name ?name}}} "
 
 							+ "FILTER(str(?mTitle)=\"" + mTitle + "\")" + "}" + " GROUP BY ?mTitle ?imdbID ?plot ?name";
 

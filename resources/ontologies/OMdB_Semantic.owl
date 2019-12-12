@@ -634,7 +634,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Breaking_Bad">
         <rdf:type rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Drama"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Media"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Movie"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Series"/>
         <hasActor rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Aaron_Paul"/>
         <hasActor rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Bryan_Cranston"/>
         <hasCreator rdf:resource="http://www.semanticweb.org/edison/ontologies/2019/10/OMdB_Semantic#Vince_Gillingan"/>
